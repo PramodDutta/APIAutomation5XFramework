@@ -11,6 +11,11 @@ public class AssertActions {
                 "value of status code is" + response.getStatusCode());
     }
 
+    public void verifyStatusCodeInvalidReq(Response response) {
+        assertEquals(String.valueOf(response.getStatusCode()).startsWith("50"), true,
+                "value of status code is" + response.getStatusCode());
+    }
+
     public void verifyResponseBody(String actual, String expected, String description) {
         assertEquals(actual, expected, description);
 
@@ -35,5 +40,10 @@ public class AssertActions {
         assertEquals(actual, expected, description);
 
     }
+
+
+
+
+
 
 }
